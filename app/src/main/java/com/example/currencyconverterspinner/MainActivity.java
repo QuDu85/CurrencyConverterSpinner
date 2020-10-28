@@ -89,11 +89,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        Spinner spin1 = (Spinner) parent;
-        Spinner spin2 = (Spinner) parent;
-        if(spin1.getId()==R.id.fro)
+        Spinner spin = (Spinner) parent;
+        if(spin.getId()==R.id.fro)
             fr=position;
-        if(spin2.getId()==R.id.to)
+        else if(spin.getId()==R.id.to)
             t=position;
         text = amount.getText().toString();
         if(!text.isEmpty())
